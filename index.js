@@ -1,10 +1,13 @@
 let express = require("express");
 let mysql = require('mysql')
 let pool = require('./database/database').pool;
+let cors = require('cors');
 
 let app = express()
 
 app.use(express.json());
+app.use(cors());
+
 
 app.post("/register", (req, res) => {
     let name = req.body.name;
