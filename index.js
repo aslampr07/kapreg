@@ -6,14 +6,6 @@ let app = express()
 
 app.use(express.json());
 
-/*
-let pool = mysql.createConnection({
-    "database" : "kapricious",
-    "host" : "127.0.0.1",
-    "user" : "remote",
-    "password" : "nimda123"
-});*/
-
 app.post("/register", (req, res) => {
     let name = req.body.name;
     let email = req.body.email;
@@ -38,7 +30,10 @@ app.post("/register", (req, res) => {
         console.log(sql);
         pool.query(sql, (err, rows) => {
             if(err) throw err;
-            res.send("OK");
+            let response = {
+                "success": true
+            }
+            res.json(response);
         });
     });
 });
