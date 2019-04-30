@@ -18,6 +18,7 @@
   "homepage": "https://github.com/aslampr07/kapreg#readme",
   "dependencies": {
     "cors": "^2.8.5",
+    "exceljs": "^1.9.1",
     "express": "^4.16.4",
     "mysql": "^2.17.1"
   }
