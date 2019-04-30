@@ -59,11 +59,11 @@ app.get("/excel", (req, res) => {
         sheet.columns = [
             { header: "Sl. No", key: "sl" },
             { header: "ID", key: "ID" },
-            { header: "Name", key: "name" },
-            { header: "College", key: "college" },
-            { header: "Phone", key: "phone" },
-            { header: "Email", key: "email" },
-            { header: "Registration Time", key: "registerTime" },
+            { header: "Name", key: "name", width: 30 },
+            { header: "College", key: "college", width: 40 },
+            { header: "Phone", key: "phone", width: 20 },
+            { header: "Email", key: "email", width: 35 },
+            { header: "Registration Time", key: "registerTime", width: 25 },
             { header: "Event Code", key: "eventcode" }
         ]
 
